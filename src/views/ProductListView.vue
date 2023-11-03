@@ -1,6 +1,6 @@
 
 <script setup>
-
+    import 'primevue/resources/themes/lara-light-teal/theme.css'
     import { ref, onMounted } from 'vue';
     import DataTable from 'primevue/datatable';
     import Column from 'primevue/column';
@@ -8,7 +8,7 @@
     import CategoryService from '../service/CategoryService';
     import Rating from 'primevue/rating';
     import InputText from 'primevue/inputtext';
-
+    import Button from "primevue/button"
     const selectedCategory = ref(null);
     const filteredProducts = ref()
     const searchTerm = ref('');
@@ -56,9 +56,12 @@
 <template>
     <div>
         <h1>Categorias</h1>
-        <ul>
-            <li v-for="elem in category"><button @click="filterProductsByCategory(elem)">{{ elem }}</button></li>
-        </ul>
+        <div class="contenedor_categorias">
+            <div v-for="elem in category">
+                <Button @click="filterProductsByCategory(elem)">{{ elem }}</Button>
+            </div>
+        </div>
+
     </div>
     <div>
         <h1>Lista de productos</h1>
@@ -82,4 +85,10 @@
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+    .contenedor_categorias {
+
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
