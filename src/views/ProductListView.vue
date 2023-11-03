@@ -58,7 +58,7 @@
         <h1>Categorias</h1>
         <div class="contenedor_categorias">
             <div v-for="elem in category">
-                <Button @click="filterProductsByCategory(elem)">{{ elem }}</Button>
+                <Button @click="filterProductsByCategory(elem)" severity="secondary" text raised>{{ elem }}</Button>
             </div>
         </div>
 
