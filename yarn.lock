@@ -2167,6 +2167,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"primevue@npm:^3.39.0":
+  version: 3.39.0
+  resolution: "primevue@npm:3.39.0"
+  peerDependencies:
+    vue: ^3.0.0
+  checksum: 110fc0c61fb8a00ccfb2de7c84c2e20269ee09324a49fb591c06a97f79517e4f0530caf133d6d6239af77440567f22c57edd96a4f99328e7401ad9afceef73a0
+  languageName: node
+  linkType: hard
+
 "proc-log@npm:^3.0.0":
   version: 3.0.0
   resolution: "proc-log@npm:3.0.0"
@@ -2194,6 +2203,7 @@ __metadata:
     eslint: ^8.49.0
     eslint-plugin-vue: ^9.17.0
     prettier: ^3.0.3
+    primevue: ^3.39.0
     vite: ^4.4.11
     vue: ^3.3.4
     vue-router: ^4.2.5

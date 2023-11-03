@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.52.0"],\
             ["eslint-plugin-vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:9.18.1"],\
             ["prettier", "npm:3.0.3"],\
+            ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
             ["vite", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:4.5.0"],\
             ["vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.3.7"],\
             ["vue-router", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:4.2.5"]\
@@ -2538,6 +2539,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["primevue", [\
+        ["npm:3.39.0", {\
+          "packageLocation": "./.yarn/cache/primevue-npm-3.39.0-6a94ce34eb-110fc0c61f.zip/node_modules/primevue/",\
+          "packageDependencies": [\
+            ["primevue", "npm:3.39.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0", {\
+          "packageLocation": "./.yarn/__virtual__/primevue-virtual-4965b7dc2e/0/cache/primevue-npm-3.39.0-6a94ce34eb-110fc0c61f.zip/node_modules/primevue/",\
+          "packageDependencies": [\
+            ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
+            ["@types/vue", null],\
+            ["vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.3.7"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue",\
+            "vue"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["proc-log", [\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/proc-log-npm-3.0.0-a8c21c2f0f-02b64e1b39.zip/node_modules/proc-log/",\
@@ -2569,6 +2592,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.52.0"],\
             ["eslint-plugin-vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:9.18.1"],\
             ["prettier", "npm:3.0.3"],\
+            ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
             ["vite", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:4.5.0"],\
             ["vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.3.7"],\
             ["vue-router", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:4.2.5"]\
