@@ -89,6 +89,6 @@
     .contenedor_categorias {
 
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 </style>
