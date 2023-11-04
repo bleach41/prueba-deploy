@@ -21,8 +21,8 @@
       <RouterLink :to="{ name: 'productos' }" class=" felx font-bold hover:shadow-md hover:font-md">
         PRODUCTOS
       </RouterLink>
-      <router-link :to="{ name: 'cart' }" class="flex"><img src="../public/MdiCartVariant.svg" alt="portafolio"
-          class="h-5">{{ cant_productos }}</router-link>
+      <RouterLink :to="{ name: 'cart' }" class="flex"><img src="../public/MdiCartVariant.svg" alt="portafolio"
+          class="h-5">{{ cant_productos }}</RouterLink>
 
     </nav>
   </div>
