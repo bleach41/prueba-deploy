@@ -115,7 +115,7 @@
 
 
         <div class="grid justify-items-end mx-40 my-5 underline decoration-sky-500/[.33]">
-            {{ cant_cart }}
+            current selected: {{ cant_cart }}
 
         </div>
 
