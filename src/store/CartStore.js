@@ -28,6 +28,10 @@ export const useMyStore = defineStore('myStore', {
             }
         },
 
+        vaciarCarro(producto) {
+            this.carrito.splice(producto)
+        }
+
 
     },
 

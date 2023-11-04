@@ -4,6 +4,7 @@
     import { computed } from 'vue'
     import Card from 'primevue/card'
     import Button from 'primevue/button'
+    import 'primeicons/primeicons.css'
 
 
     const myStore = useMyStore();
@@ -24,12 +25,22 @@
 
         myStore.eliminarProductoDelCarrito(producto)
     }
+
+    function vaciarCarrito(carrito) {
+        myStore.vaciarCarro(carrito)
+    }
 </script>
 
 <template>
     <div class="grid grid-cols-1 gap-4 place-items-center">
         <h2 class="my-10">Tus productos: {{ cant_productos }}</h2>
         <h2 class="my-10">total: ${{ total }}</h2>
+
+        <div class="flex gap-10">
+            <button class="border-solid border-2 border-sky-500 p-2 hover:bg-slate-300" @click="vaciarCarrito">Vaciar
+                Carrito</button>
+            <button class="border-solid border-2 border-sky-500 p-2  hover:bg-slate-300">Pagar</button>
+        </div>
 
         <!-- <div v-if="productoSeleccionado">
 

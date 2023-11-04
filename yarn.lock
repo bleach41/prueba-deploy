@@ -2573,6 +2573,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"primeicons@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "primeicons@npm:6.0.1"
+  checksum: a1412fee16ddbd24e06052a7e94b973cf6f68fadb5349192101388f2681f822b3bde077948e6d53e9949f87148b495e4bf2b149ad07242de068d2e7233f4446c
+  languageName: node
+  linkType: hard
+
 "primevue@npm:^3.39.0":
   version: 3.39.0
   resolution: "primevue@npm:3.39.0"
@@ -2613,6 +2620,7 @@ __metadata:
     pinia-plugin-persistedstate: ^3.2.0
     postcss: ^8.4.31
     prettier: ^3.0.3
+    primeicons: ^6.0.1
     primevue: ^3.39.0
     tailwindcss: ^3.3.5
     vite: ^4.4.11

@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pinia-plugin-persistedstate", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.2.0"],\
             ["postcss", "npm:8.4.31"],\
             ["prettier", "npm:3.0.3"],\
+            ["primeicons", "npm:6.0.1"],\
             ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
             ["tailwindcss", "npm:3.3.5"],\
             ["vite", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:4.5.0"],\
@@ -3087,6 +3088,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["primeicons", [\
+        ["npm:6.0.1", {\
+          "packageLocation": "./.yarn/cache/primeicons-npm-6.0.1-11d1ab20ef-a1412fee16.zip/node_modules/primeicons/",\
+          "packageDependencies": [\
+            ["primeicons", "npm:6.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["primevue", [\
         ["npm:3.39.0", {\
           "packageLocation": "./.yarn/cache/primevue-npm-3.39.0-6a94ce34eb-110fc0c61f.zip/node_modules/primevue/",\
@@ -3144,6 +3154,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pinia-plugin-persistedstate", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.2.0"],\
             ["postcss", "npm:8.4.31"],\
             ["prettier", "npm:3.0.3"],\
+            ["primeicons", "npm:6.0.1"],\
             ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
             ["tailwindcss", "npm:3.3.5"],\
             ["vite", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:4.5.0"],\

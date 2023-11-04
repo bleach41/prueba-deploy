@@ -10,7 +10,8 @@
     import Rating from 'primevue/rating';
     import InputText from 'primevue/inputtext';
     import Button from "primevue/button"
-    import InputSwitch from 'primevue/inputswitch'
+    import 'primeicons/primeicons.css'
+
     import { useMyStore } from '../store/CartStore';
 
 
@@ -112,21 +113,14 @@
             </InputText>
         </div>
 
-        <div class="contedor_up_tabla">
-            <div class="flex flex-col mx-10">
-                <span for="input-metakey" class="align-middle px-1">Multi / Sencillo</span>
-                <InputSwitch v-model="metaKey" inputId="input-metakey" class="align-middle my-1" />
-            </div>
-            <div>
-                {{ cant_cart }}
-                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded mx-10"
-                    @click="agregarAlCarrito">Add</button>
 
-            </div>
+        <div class="grid justify-items-end mx-40 my-5 underline decoration-sky-500/[.33]">
+            {{ cant_cart }}
+
         </div>
+
         <DataTable v-model:selection="selectedProducts" :value="filteredProducts" dataKey="id" selectionMode="multiple"
             :metaKeySelection="metaKey" class="mx-10" @click="enviarAlAlmacen">
-            <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
             <Column field="title" header="Title" class="truncate overflow-hidden">...</Column>
             <Column field="price" header="Price" price></Column>
             <Column field="category" header="Category"></Column>
