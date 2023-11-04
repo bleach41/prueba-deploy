@@ -34,6 +34,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:10.4.16"],\
             ["eslint", "npm:8.52.0"],\
             ["eslint-plugin-vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:9.18.1"],\
+            ["pinia", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:2.1.7"],\
+            ["pinia-plugin-persistedstate", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.2.0"],\
             ["postcss", "npm:8.4.31"],\
             ["prettier", "npm:3.0.3"],\
             ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
@@ -2863,6 +2865,60 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["pinia", [\
+        ["npm:2.1.7", {\
+          "packageLocation": "./.yarn/cache/pinia-npm-2.1.7-195409c154-1b7882aab2.zip/node_modules/pinia/",\
+          "packageDependencies": [\
+            ["pinia", "npm:2.1.7"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:2.1.7", {\
+          "packageLocation": "./.yarn/__virtual__/pinia-virtual-ff7e52b212/0/cache/pinia-npm-2.1.7-195409c154-1b7882aab2.zip/node_modules/pinia/",\
+          "packageDependencies": [\
+            ["pinia", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:2.1.7"],\
+            ["@types/typescript", null],\
+            ["@types/vue", null],\
+            ["@types/vue__composition-api", null],\
+            ["@vue/composition-api", null],\
+            ["@vue/devtools-api", "npm:6.5.1"],\
+            ["typescript", null],\
+            ["vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.3.7"],\
+            ["vue-demi", "virtual:ff7e52b212bb1151f742e8f3b5bcbc5718513514bc5da662a42f3a5c3a77d08659d6ab751c1f2a4eb786331a6283ff6e45117a5eda0b3102b624397a9317e1b6#npm:0.14.6"]\
+          ],\
+          "packagePeers": [\
+            "@types/typescript",\
+            "@types/vue",\
+            "@types/vue__composition-api",\
+            "@vue/composition-api",\
+            "typescript",\
+            "vue"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["pinia-plugin-persistedstate", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/pinia-plugin-persistedstate-npm-3.2.0-507037f035-c558b83cdd.zip/node_modules/pinia-plugin-persistedstate/",\
+          "packageDependencies": [\
+            ["pinia-plugin-persistedstate", "npm:3.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/pinia-plugin-persistedstate-virtual-9b60107cc0/0/cache/pinia-plugin-persistedstate-npm-3.2.0-507037f035-c558b83cdd.zip/node_modules/pinia-plugin-persistedstate/",\
+          "packageDependencies": [\
+            ["pinia-plugin-persistedstate", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.2.0"],\
+            ["@types/pinia", null],\
+            ["pinia", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:2.1.7"]\
+          ],\
+          "packagePeers": [\
+            "@types/pinia",\
+            "pinia"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["pirates", [\
         ["npm:4.0.6", {\
           "packageLocation": "./.yarn/cache/pirates-npm-4.0.6-a8ec571a43-46a65fefaf.zip/node_modules/pirates/",\
@@ -3084,6 +3140,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:10.4.16"],\
             ["eslint", "npm:8.52.0"],\
             ["eslint-plugin-vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:9.18.1"],\
+            ["pinia", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:2.1.7"],\
+            ["pinia-plugin-persistedstate", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.2.0"],\
             ["postcss", "npm:8.4.31"],\
             ["prettier", "npm:3.0.3"],\
             ["primevue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.39.0"],\
@@ -3711,6 +3769,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/typescript",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["vue-demi", [\
+        ["npm:0.14.6", {\
+          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-b585c129ea/node_modules/vue-demi/",\
+          "packageDependencies": [\
+            ["vue-demi", "npm:0.14.6"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:ff7e52b212bb1151f742e8f3b5bcbc5718513514bc5da662a42f3a5c3a77d08659d6ab751c1f2a4eb786331a6283ff6e45117a5eda0b3102b624397a9317e1b6#npm:0.14.6", {\
+          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-b585c129ea/node_modules/vue-demi/",\
+          "packageDependencies": [\
+            ["vue-demi", "virtual:ff7e52b212bb1151f742e8f3b5bcbc5718513514bc5da662a42f3a5c3a77d08659d6ab751c1f2a4eb786331a6283ff6e45117a5eda0b3102b624397a9317e1b6#npm:0.14.6"],\
+            ["@types/vue", null],\
+            ["@types/vue__composition-api", null],\
+            ["@vue/composition-api", null],\
+            ["vue", "virtual:01fd075c5377c7866e14d800575d9a2985e9b584088f00e2a5f44347922bdc919fa05b8930925af4bc69f4c21b1e441adec3f3cc0b0232752cd1671aa533bd60#npm:3.3.7"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue",\
+            "@types/vue__composition-api",\
+            "@vue/composition-api",\
+            "vue"\
           ],\
           "linkType": "HARD"\
         }]\

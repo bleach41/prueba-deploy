@@ -1,8 +1,9 @@
 
 <script setup>
     import 'primevue/resources/themes/lara-light-teal/theme.css'
-    import { ref, onMounted } from 'vue';
+    import { ref, onMounted, toRaw } from 'vue';
     import DataTable from 'primevue/datatable';
+    import DataView from 'primevue/dataview';
     import Column from 'primevue/column';
     import ProductsService from '../service/ProductsService';
     import CategoryService from '../service/CategoryService';
@@ -10,14 +11,17 @@
     import InputText from 'primevue/inputtext';
     import Button from "primevue/button"
     import InputSwitch from 'primevue/inputswitch'
+    import { useMyStore } from '../store/CartStore';
+
 
     //INIT
     const selectedCategory = ref(null);
     const filteredProducts = ref()
     const searchTerm = ref('');
-    const selectedProduct = ref();
+    const selectedProducts = ref([]);
     const metaKey = ref(true);
-
+    const cant_cart = ref(0)
+    const myStore = useMyStore();
 
 
     // call Api Category
@@ -56,6 +60,32 @@
         }
     };
 
+    // const Seleccion = () => {
+    //     cant_cart.value++
+    //     const rawProduct = toRaw(selectedProducts.value[0]);
+    //     console.log(rawProduct.id);
+    //     console.log(products.value[rawProduct.id])
+    // };
+    const enviarAlAlmacen = () => {
+        const rawProduct = toRaw(selectedProducts.value[0]);
+
+        if (rawProduct) {
+            const producto = {
+                id: rawProduct.id,
+                title: rawProduct.title,
+                price: rawProduct.price,
+                category: rawProduct.category,
+                image: rawProduct.image,
+                rating: rawProduct.rating,
+            };
+
+            myStore.setProductoSeleccionado(producto);
+            console.log('Producto enviado al almacén:', producto);
+        } else {
+            console.log('Ningún producto seleccionado.');
+        }
+    };
+
 </script>
 
 
@@ -86,12 +116,14 @@
                 <InputSwitch v-model="metaKey" inputId="input-metakey" class="align-middle my-1" />
             </div>
             <div>
-                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded mx-10">comprar</button>
+                {{ cant_cart }}
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded mx-10"
+                    @click="agregarAlCarrito">Add</button>
 
             </div>
         </div>
-        <DataTable v-model:selection="selectedProduct" :value="filteredProducts" dataKey="id" selectionMode="multiple"
-            :metaKeySelection="metaKey" class="mx-10">
+        <DataTable v-model:selection="selectedProducts" :value="filteredProducts" dataKey="id" selectionMode="multiple"
+            :metaKeySelection="metaKey" class="mx-10" @click="enviarAlAlmacen">
             <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
             <Column field="title" header="Title" class="truncate overflow-hidden">...</Column>
             <Column field="price" header="Price" price></Column>
@@ -107,6 +139,33 @@
                 </template>
             </Column>
         </DataTable>
+        <!-- <DataView :value="products">
+            <template #list="slotProps">
+                <div class="col-12">
+                    <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+                        <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round">
+                        <div
+                            class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                            <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                                <div class="text-2xl font-bold text-900">{{ slotProps.data.name }}</div>
+                                <Rating :modelValue="slotProps.data.rating" readonly :cancel="false"></Rating>
+                                <div class="flex align-items-center gap-3">
+                                    <span class="flex align-items-center gap-2">
+                                        <i class="pi pi-tag"></i>
+                                        <span class="font-semibold">{{ slotProps.data.category }}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
+                                <span class="text-2xl font-semibold">${{ slotProps.data.price }}</span>
+                                <Button icon="pi pi-shopping-cart" rounded
+                                    :disabled="slotProps.data.inventoryStatus === 'OUTOFSTOCK'"></Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </DataView> -->
     </div>
 </template>
 
