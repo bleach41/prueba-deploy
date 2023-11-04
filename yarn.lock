@@ -2432,6 +2432,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pinia-plugin-persistedstate@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "pinia-plugin-persistedstate@npm:3.2.0"
+  peerDependencies:
+    pinia: ^2.0.0
+  checksum: c558b83cdd59e45956f328c34f0b067471dda122ed26555646107ebca5201d94c035ffaf3b400cae26020ad1be8978716f1f538653d6b90f23760c2f7ccbce82
+  languageName: node
+  linkType: hard
+
+"pinia@npm:^2.1.7":
+  version: 2.1.7
+  resolution: "pinia@npm:2.1.7"
+  dependencies:
+    "@vue/devtools-api": ^6.5.0
+    vue-demi: ">=0.14.5"
+  peerDependencies:
+    "@vue/composition-api": ^1.4.0
+    typescript: ">=4.4.4"
+    vue: ^2.6.14 || ^3.3.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+    typescript:
+      optional: true
+  checksum: 1b7882aab2828ad209d3e76e06918c8811d04699c9308d372094cde6df485d7e7785f25a3bb5c6a3724aeaee3fb0082fae03c41a6657acd3486c7965a0a09d34
+  languageName: node
+  linkType: hard
+
 "pirates@npm:^4.0.1":
   version: 4.0.6
   resolution: "pirates@npm:4.0.6"
@@ -2545,6 +2573,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"primeicons@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "primeicons@npm:6.0.1"
+  checksum: a1412fee16ddbd24e06052a7e94b973cf6f68fadb5349192101388f2681f822b3bde077948e6d53e9949f87148b495e4bf2b149ad07242de068d2e7233f4446c
+  languageName: node
+  linkType: hard
+
 "primevue@npm:^3.39.0":
   version: 3.39.0
   resolution: "primevue@npm:3.39.0"
@@ -2581,8 +2616,11 @@ __metadata:
     autoprefixer: ^10.4.16
     eslint: ^8.49.0
     eslint-plugin-vue: ^9.17.0
+    pinia: ^2.1.7
+    pinia-plugin-persistedstate: ^3.2.0
     postcss: ^8.4.31
     prettier: ^3.0.3
+    primeicons: ^6.0.1
     primevue: ^3.39.0
     tailwindcss: ^3.3.5
     vite: ^4.4.11
@@ -3127,6 +3165,22 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 06f1a4c858e4dc4c04a10466f4ccacea30c5a9f8574e5ba3deb9d03fa20e80ca6797f02dad97a988da7cdef96238dbc69c3b6a538156585c74722d996223619e
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:>=0.14.5":
+  version: 0.14.6
+  resolution: "vue-demi@npm:0.14.6"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 424b1f340d5111fc4d4a0f8042c14ae836ba983bc968773a6d955d6846202d7e6f951993ac1525be8732b0cfe0c81d94ab88f427c97bfa86ead08db06491279b
   languageName: node
   linkType: hard
 
