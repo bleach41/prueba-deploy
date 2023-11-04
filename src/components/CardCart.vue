@@ -1,6 +1,7 @@
 <script setup>
 
     import { useMyStore } from '../store/CartStore';
+    import { computed } from 'vue'
     import Card from 'primevue/card'
     import Button from 'primevue/button'
 
@@ -9,18 +10,28 @@
     const carrito = myStore.getCarrito;
     const productoSeleccionado = myStore.getProductoSeleccionado;
 
+    let cant_productos = computed(() => carrito.length);
+    let total = computed(() => {
+        let total = 0;
+        carrito.forEach((producto) => {
+            total += producto.price;
+        });
+        return Number(total.toFixed(2));
+    });
 
-    function Eliminar() {
 
-        console.log(productoSeleccionado)
+    function Eliminar(producto) {
+
+        myStore.eliminarProductoDelCarrito(producto)
     }
 </script>
 
 <template>
     <div class="grid grid-cols-1 gap-4 place-items-center">
-        <h2 class="my-10">Tus productos</h2>
+        <h2 class="my-10">Tus productos: {{ cant_productos }}</h2>
+        <h2 class="my-10">total: ${{ total }}</h2>
 
-        <div v-if="productoSeleccionado">
+        <!-- <div v-if="productoSeleccionado">
 
             <Card :value="productoSeleccionado" dataKey="id" style="width: 25em">
                 <template #header>
@@ -43,7 +54,7 @@
 
                 </template>
             </Card>
-        </div>
+        </div> -->
 
         <div v-if="carrito">
             <ul>
@@ -66,7 +77,7 @@
                             </p>
                         </template>
                         <template #footer>
-                            <Button icon="pi pi-check" label="Elimnar" @click="Eliminar" />
+                            <Button icon="pi pi-check" label="Elimnar" @click="Eliminar(producto)" />
 
                         </template>
                     </Card>

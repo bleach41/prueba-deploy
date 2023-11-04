@@ -19,7 +19,17 @@ export const useMyStore = defineStore('myStore', {
         setProductoSeleccionado(producto) {
             this.productoSeleccionado = producto;
         },
+
+
+        eliminarProductoDelCarrito(producto) {
+            const index = this.carrito.findIndex((p) => p.id === producto.id);
+            if (index !== -1) {
+                this.carrito.splice(index, 1);
+            }
+        },
+
+
     },
 
-    persist: false
+    persist: true
 });
