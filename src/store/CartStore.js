@@ -20,4 +20,6 @@ export const useMyStore = defineStore('myStore', {
             this.productoSeleccionado = producto;
         },
     },
+
+    persist: false
 });

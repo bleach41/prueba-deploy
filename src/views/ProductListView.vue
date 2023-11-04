@@ -68,7 +68,7 @@
     // };
     const enviarAlAlmacen = () => {
         const rawProduct = toRaw(selectedProducts.value[0]);
-
+        cant_cart.value++
         if (rawProduct) {
             const producto = {
                 id: rawProduct.id,
@@ -80,6 +80,7 @@
             };
 
             myStore.setProductoSeleccionado(producto);
+            myStore.agregarAlCarrito(rawProduct)
             console.log('Producto enviado al almacén:', producto);
         } else {
             console.log('Ningún producto seleccionado.');
