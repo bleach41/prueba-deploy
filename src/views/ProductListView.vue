@@ -95,7 +95,7 @@
 <template>
     <div>
 
-        <div class="contenedor_categorias my-10">
+        <div class="contenedor_categorias my-10 mx-10">
             <div v-for="elem in category">
                 <Button @click="filterProductsByCategory(elem)" severity="secondary" text raised class="p-1">{{ elem
                 }}</Button>
@@ -120,7 +120,7 @@
         </div>
 
         <DataTable v-model:selection="selectedProducts" :value="filteredProducts" dataKey="id" selectionMode="multiple"
-            :metaKeySelection="metaKey" class="mx-10" @click="enviarAlAlmacen">
+            class="mx-10" @click="enviarAlAlmacen">
             <Column field="title" header="Title" class="truncate overflow-hidden">...</Column>
             <Column field="price" header="Price" price></Column>
             <Column field="category" header="Category"></Column>
