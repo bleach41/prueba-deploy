@@ -23,6 +23,8 @@
     const metaKey = ref(true);
     const cant_cart = ref(0)
     const myStore = useMyStore();
+
+    //simbolo de $ en la tabla
     const formatCurrency = (value) => {
         return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
     };
