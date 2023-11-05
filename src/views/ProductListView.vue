@@ -88,10 +88,13 @@
             myStore.setProductoSeleccionado(producto);
             myStore.agregarAlCarrito(producto)
             console.log('Producto enviado al almacén:', producto);
+            selectedProducts.value = []
         } else {
             console.log('Ningún producto seleccionado.');
         }
     };
+
+
 
 </script>
 
