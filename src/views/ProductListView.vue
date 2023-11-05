@@ -139,7 +139,7 @@
             </Column>
             <Column field="rating" header="Reviews">
                 <template #body="slotProps">
-                    <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                    <Rating :modelValue="slotProps.data.rating.rate" readonly :cancel="false" />
                 </template>
             </Column>
         </DataTable>
