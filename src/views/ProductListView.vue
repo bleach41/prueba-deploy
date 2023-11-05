@@ -79,6 +79,7 @@
             const producto = {
                 id: rawProduct.id,
                 title: rawProduct.title,
+                description: rawProduct.description,
                 price: rawProduct.price,
                 category: rawProduct.category,
                 image: rawProduct.image,
