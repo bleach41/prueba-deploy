@@ -4,12 +4,13 @@
     import { computed } from 'vue'
     import Card from 'primevue/card'
     import Button from 'primevue/button'
+    import Rating from 'primevue/rating';
     import 'primeicons/primeicons.css'
 
 
     const myStore = useMyStore();
     const carrito = myStore.getCarrito;
-    const productoSeleccionado = myStore.getProductoSeleccionado;
+    // const productoSeleccionado = myStore.getProductoSeleccionado;
 
     let cant_productos = computed(() => carrito.length);
     let total = computed(() => {
@@ -77,19 +78,22 @@
                         <template #title> {{ producto.title }} </template>
                         <template #subtitle> ${{ producto.price }}</template>
                         <template #content>
-                            <p class="m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-                                repudiandae
-                                numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam
-                                perferendis
-                                esse,
-                                cupiditate neque
-                                quas!
-                            </p>
+                            <div>
+                                <p class="m-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur
+                                    error repudiandae
+                                    numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam
+                                    perferendis esse,
+                                    cupiditate neque quas!
+                                </p>
+                                <Rating :modelValue="producto.rating.rate" readonly :cancel="false" />
+                            </div>
                         </template>
                         <template #footer>
                             <Button icon="pi pi-check" label="Elimnar" @click="Eliminar(producto)" />
-
+                        </template>
+                        <template #extra>
+                            <Rating :modelValue="producto.rating.rate" readonly :cancel="false" />
                         </template>
                     </Card>
                 </li>
