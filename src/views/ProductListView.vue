@@ -23,7 +23,9 @@
     const metaKey = ref(true);
     const cant_cart = ref(0)
     const myStore = useMyStore();
-
+    const formatCurrency = (value) => {
+        return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    };
 
     // call Api Category
     const categoryService = new CategoryService();
@@ -122,16 +124,20 @@
         <DataTable v-model:selection="selectedProducts" :value="filteredProducts" dataKey="id" selectionMode="multiple"
             class="mx-10" @click="enviarAlAlmacen">
             <Column field="title" header="Title" class="truncate overflow-hidden">...</Column>
-            <Column field="price" header="Price" price></Column>
+            <Column field="price" header="Price" price>
+                <template #body="slotProps">
+                    {{ formatCurrency(slotProps.data.price) }}
+                </template>
+            </Column>
             <Column field="category" header="Category"></Column>
             <Column field="image" header="Preview">
                 <template #body="{ data }">
                     <img :src="data.image" alt="Product" width="50" height="50">
                 </template>
             </Column>
-            <Column field="rating.count" header="Reviews">
+            <Column field="rating" header="Reviews">
                 <template #body="slotProps">
-                    <Rating :value="slotProps.data.rating.rate" :cancel="false"></Rating>
+                    <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
                 </template>
             </Column>
         </DataTable>
